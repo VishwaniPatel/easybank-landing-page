@@ -1,0 +1,38 @@
+.navbar {
+  position: relative;
+  z-index: 50;
+}
+.toggle-bar {
+  padding: 20px;
+  position: absolute;
+  display: none;
+  top: 50px;
+  left: 0;
+  right: 0;
+  margin: 24px;
+}
+@media (max-width: 768px) {
+  #toggle:checked + .toggle-bar {
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.invite {
+  background-color: $bright-cyan;
+}
+.main {
+  background-color: $light-gray;
+  .left-home {
+    padding: 200px 0px;
+  }
+  .bg-main {
+    background-image: url("../../../assets/images/bg-intro-desktop.svg");
+    background-position: top -250px left 0px;
+    background-repeat: no-repeat;
+  }
+  .mockup-img {
+    top: -120px;
+  }
+}
