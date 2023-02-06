@@ -1,6 +1,7 @@
 .navbar {
   position: relative;
   z-index: 50;
+  background-color: $white;
 }
 .toggle-bar {
   padding: 20px;
@@ -19,20 +20,67 @@
     align-items: center;
   }
 }
-.invite {
-  background-color: $bright-cyan;
+.btn-invite {
+  background-image: linear-gradient(to right, $lime-blue, $bright-cyan);
+  font-size: 14px;
+  padding: 8px 24px;
+  color: $white;
+  font-weight: 400;
 }
+
 .main {
   background-color: $light-gray;
+  background-image: url("../../../assets/images/bg-intro-desktop.svg");
+  background-position: top -250px right -200px;
+  background-repeat: no-repeat;
   .left-home {
-    padding: 200px 0px;
+    padding: 200px 200px 200px 0;
+    .title {
+      font-size: 54px;
+      color: $primary;
+    }
+    .desc {
+      color: grayish-blue;
+    }
   }
-  .bg-main {
-    background-image: url("../../../assets/images/bg-intro-desktop.svg");
-    background-position: top -250px left 0px;
-    background-repeat: no-repeat;
-  }
+
   .mockup-img {
     top: -120px;
+    left: 93px;
+  }
+}
+.feature-section {
+  background-color: $light-grayish-blue;
+  padding: 100px 0;
+  p {
+    color: $light;
+  }
+  img {
+    margin-bottom: 30px;
+  }
+  h4 {
+    color: $primary;
+    margin-bottom: 20px;
+  }
+}
+.articles-section {
+  background-color: $light-gray;
+  padding: 100px 0;
+  img {
+    max-width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  span {
+    font-size: 10px;
+    color: $light;
+  }
+  h6 {
+    margin-top: 8px;
+    color: $primary;
+  }
+  p {
+    font-size: 14px;
+    color: $light;
   }
 }

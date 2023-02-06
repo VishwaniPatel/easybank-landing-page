@@ -1,0 +1,18 @@
+footer {
+  background-color: $primary;
+  padding: 40px;
+  color: $white;
+  a {
+    all: unset;
+  }
+  ul,
+  li {
+    list-style: none;
+  }
+  .menu {
+    margin: 0px 50px;
+    li {
+      margin-bottom: 12px;
+    }
+  }
+}
