@@ -31,7 +31,7 @@
 .main {
   background-color: $light-gray;
   background-image: url("../../../assets/images/bg-intro-desktop.svg");
-  background-position: top -250px right -200px;
+  background-position: top -250px left 50%;
   background-repeat: no-repeat;
   .left-home {
     padding: 200px 200px 200px 0;
@@ -47,6 +47,12 @@
   .mockup-img {
     top: -120px;
     left: 93px;
+  }
+  @include media-breakpoint-down(sm) {
+    background-image: url("../../../assets/images/bg-intro-mobile.svg");
+    .mockup-img {
+      height: 400px;
+    }
   }
 }
 .feature-section {

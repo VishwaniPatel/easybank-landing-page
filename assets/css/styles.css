@@ -6911,7 +6911,7 @@ progress {
 .main {
   background-color: hsl(0deg, 0%, 98%);
   background-image: url("../../../assets/images/bg-intro-desktop.svg");
-  background-position: top -250px right -200px;
+  background-position: top -250px left 50%;
   background-repeat: no-repeat;
 }
 .main .left-home {
@@ -6927,6 +6927,14 @@ progress {
 .main .mockup-img {
   top: -120px;
   left: 93px;
+}
+@media (max-width: 575.98px) {
+  .main {
+    background-image: url("../../../assets/images/bg-intro-mobile.svg");
+  }
+  .main .mockup-img {
+    height: 400px;
+  }
 }
 
 .feature-section {
