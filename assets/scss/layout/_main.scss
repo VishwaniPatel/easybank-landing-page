@@ -2,6 +2,13 @@
   position: relative;
   z-index: 50;
   background-color: $white;
+  .menu-bar {
+    height: 60px;
+  }
+  .nav-link:hover {
+    height: 100%;
+    border-bottom: 3px solid $bright-cyan;
+  }
 }
 .toggle-bar {
   padding: 20px;
@@ -21,18 +28,20 @@
   }
 }
 .btn-invite {
-  background-image: linear-gradient(to right, $lime-blue, $bright-cyan);
+  background-image: linear-gradient(to right, $bright-cyan, $lime-blue);
   font-size: 14px;
   padding: 8px 24px;
   color: $white;
   font-weight: 400;
+  &:hover {
+    opacity: 0.5;
+    color: $white;
+  }
 }
 
 .main {
   background-color: $light-gray;
-  background-image: url("../../../assets/images/bg-intro-desktop.svg");
-  background-position: top -250px left 50%;
-  background-repeat: no-repeat;
+
   .left-home {
     padding: 200px 200px 200px 0;
     .title {
@@ -43,16 +52,34 @@
       color: grayish-blue;
     }
   }
+  .right-home {
+    background-image: url("../../../assets/images/bg-intro-desktop.svg");
+    background-position: top 80% left 10%;
+    background-repeat: no-repeat;
+    // overflow: hidden;
+  }
 
-  .mockup-img {
+  @include media-breakpoint-down(sm) {
+    .left-home {
+      padding: 20px;
+      .title {
+        font-size: 40px;
+      }
+    }
+    background-image: url("../../../assets/images/bg-intro-mobile.svg");
+    background-position: left 40px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+}
+.mockup-img {
+  height: 400px;
+
+  @include media-breakpoint-up(md) {
+    position: absolute;
     top: -120px;
     left: 93px;
-  }
-  @include media-breakpoint-down(sm) {
-    background-image: url("../../../assets/images/bg-intro-mobile.svg");
-    .mockup-img {
-      height: 400px;
-    }
+    height: auto;
   }
 }
 .feature-section {
@@ -88,5 +115,9 @@
   p {
     font-size: 14px;
     color: $light;
+  }
+  .card-title:hover {
+    cursor: pointer;
+    color: $bright-cyan;
   }
 }
